@@ -1,0 +1,7 @@
+---
+Name: clio-elements
+After: '#root'
+---
+Syanaputra\Clio\Page\BlockPage:
+  extensions:
+    - DNADesign\Elemental\Extensions\ElementalPageExtension

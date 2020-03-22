@@ -2,6 +2,7 @@
 
 namespace Syanaputra\Clio\Page;
 
+use Page;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Forms\FieldList;
@@ -18,7 +19,7 @@ use Syanaputra\Clio\Admin\CMSFields\HeaderCMSFieldsModifier;
  *
  * @package Syanaputra\Clio\Page
  */
-class BlockPage extends SiteTree
+class BlockPage extends Page
 {
     /**
      * @var null
@@ -90,13 +91,13 @@ class BlockPage extends SiteTree
      *
      * @return \SilverStripe\Forms\FieldList
      */
-    public function getCMSFields()
-    {
-        $this->beforeUpdateCMSFields(function (FieldList $fields) {
-            $fields->removeByName(['Content']);
-        });
-
-        return parent::getCMSFields();
-    }
+//    public function getCMSFields()
+//    {
+////        $this->beforeUpdateCMSFields(function (FieldList $fields) {
+////            $fields->removeByName(['Content']);
+////        });
+//
+//        return parent::getCMSFields();
+//    }
 
 }
