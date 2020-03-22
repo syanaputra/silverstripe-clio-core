@@ -14,7 +14,7 @@
     "require": {
         "silverstripe/framework": "^4.0",
         "dnadesign/silverstripe-elemental": "^4",
-        "dnadesign/silverstripe-elemental-virtual": "^1.x-dev"
+        "dnadesign/silverstripe-elemental-virtual": "1.x-dev"
     },
     "autoload": {
         "psr-4": {
