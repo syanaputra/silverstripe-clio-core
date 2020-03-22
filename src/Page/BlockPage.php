@@ -59,7 +59,7 @@ class BlockPage extends Page
     /**
      * @var string
      */
-    private static $table_name = 'BlockPages';
+    private static $table_name = 'BlockPage';
 
     /**
      * @var string
