@@ -3,12 +3,14 @@
 namespace Syanaputra\Clio\Model;
 
 use SilverStripe\Core\Injector\Injector;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DB;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\PermissionProvider;
 use SilverStripe\Security\Security;
 use SilverStripe\View\TemplateGlobalProvider;
+use Syanaputra\Clio\Admin\CMSFields\HeaderCMSFieldsModifier;
 
 /**
  * Class ThemeSettings
@@ -98,13 +100,16 @@ class ThemeSettings extends DataObject implements PermissionProvider, TemplateGl
      */
     public function getCMSFields()
     {
-//        $this->beforeUpdateCMSFields(function (FieldList $fields) {
-//
-//        });
+        $this->beforeUpdateCMSFields(function (FieldList $fields) {
+            HeaderCMSFieldsModifier::update_fields($fields);
+        });
 
         return parent::getCMSFields();
     }
 
+    public function Title() {
+        return 'Clio Settings';
+    }
 
     /**
      * Get the current sites ThemeSettings, and creates a new one through
