@@ -1,7 +1,7 @@
 {
     "name": "syanaputra/silverstripe-clio-core",
     "description": "Core Framework for Clio theme for Silverstripe 4",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "keywords": ["silverstripe", "module", "clio"],
     "license": "BSD-3-Clause",
     "authors": [
@@ -12,5 +12,14 @@
         }
     ],
     "require": {
+        "silverstripe/framework": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Syanaputra\\Clio\\": "src/"
+        }
+    },
+    "extra": {
+        "installer-name": "silverstripe-clio-core"
     }
 }
